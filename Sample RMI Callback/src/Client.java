@@ -24,7 +24,7 @@ public class Client extends UnicastRemoteObject implements RemoteListener {
 			//9: si posso usare nel client tutti i metodi dell'implementazione del serve
 			//System.out.println( skeleton.toEur(1)+"" );
 			
-			//19: creaiamo un nuovo oggetto capace di essere esportato, questo client verrà aggiunto alla lista di clienti iscritti alla newsletter
+			//19: creaiamo un nuovo oggetto Client capace di essere esportato, questo client verrà aggiunto alla lista di clienti iscritti alla newsletter
 			Client obj = new Client();
 			skeleton.addListener(obj);
 			
@@ -44,6 +44,8 @@ public class Client extends UnicastRemoteObject implements RemoteListener {
 	//17: implemnto il metodo per riceve il parametro che invia il server
 	@Override
 	public void RemoteEvent(Object param) throws RemoteException {
+		//lavoro
 		System.out.println( "Numero di chiamate effettuate: " + param );
 	}
+	
 }

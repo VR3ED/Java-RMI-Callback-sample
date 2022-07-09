@@ -15,6 +15,7 @@ public class Server extends UnicastRemoteObject implements ICurrencyConverter{
 	
 	public Server() throws RemoteException {
 		super();
+		//13.2 nel costruttore si inizializza la lista di Client
 		listeners = new ArrayList<RemoteListener>();
 	}
 
